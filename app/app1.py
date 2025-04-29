@@ -6,7 +6,7 @@ from model import UNetAutoencoder
 
 # Load model
 model = UNetAutoencoder(num_classes=36)
-state_dict = torch.load("UNet_weights.pth", map_location=torch.device("cpu"))
+state_dict = torch.load("app/UNet_weights.pth", map_location=torch.device("cpu"))
 model.load_state_dict(state_dict, strict=False)
 model.eval()
 
